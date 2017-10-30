@@ -35,8 +35,8 @@
 				<artifactId>maven-jar-plugin</artifactId>
 				<version>2.3.1</version>
 				<configuration>
-					<finalName>smartcarlog</finalName>
-					<outputDirectory>working</outputDirectory>
+					<finalName>bigdata2017.smartcar.flume.inteceptor-1.0</finalName>
+					<outputDirectory>release</outputDirectory>
 				</configuration>
 			</plugin>
 		</plugins>
