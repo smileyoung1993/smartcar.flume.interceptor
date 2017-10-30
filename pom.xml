@@ -17,7 +17,6 @@
 			<groupId>org.apache.flume</groupId>
 			<artifactId>flume-ng-core</artifactId>
 			<version>1.6.0</version>
-			<scope>provide</scope>
 		</dependency>
 	</dependencies>
 	
@@ -25,22 +24,20 @@
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-shade-plugin</artifactId>
-				<version>1.4</version>
+				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
-					<createDependencyReducedPom>true</createDependencyReducedPom>
+					<source>1.7</source>
+					<target>1.7</target>
 				</configuration>
-
-
-				<executions>
-					<execution>
-						<phase>package</phase>
-						<goals>
-							<goal>shade</goal>
-						</goals>
-					</execution>
-
-				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.3.1</version>
+				<configuration>
+					<finalName>smartcarlog</finalName>
+					<outputDirectory>working</outputDirectory>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
